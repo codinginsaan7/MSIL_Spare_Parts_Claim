@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Claim</title>
+  <link rel="stylesheet" href="claim-form.css">
+</head>
+<body>
+  <div class="page-border">
+    <header class="main-header">
+      <div class="left">
+        <img src="maruti logo.png" class="msil-logo" alt="Maruti Suzuki Logo">
+        <span class="brand-name">MARUTI SUZUKI</span>
+      </div>
+      <div class="right">
+        <div class="powered">
+          <span class="dot"></span> Powered by <strong>&nbspDE>></strong>
+        </div>
+        <div class="divider"></div>
+        <div class="user-profile">
+          <div class="user-avatar"><img src="user-icon.png" alt="User Icon" style="width: 40px; height: 40px;"></div>
+          <div class="user-details">
+            <div class="user-name">Maruti ABC</div>
+            <div class="user-id">124</div>
+          </div>
+          <div class="user-avatar2"><img src="dropdown-icon.png" alt="User Icon" style="width: 30px; height: 30px;"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="inner-container">
+    <main class="claim-form-container">
+      <h2>MSIL SPARE PARTS CLAIM</h2>
+      <form class="claim-form">
+
+        <!-- First Row -->
+        <div class="row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="form-group">
+            <label for="refNo">Ref. No.</label>
+            <input type="text" id="refNo" name="refNo">
+          </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+          </div>
+          <div class="form-group">
+            <label for="invoiceNo">Invoice No.</label>
+            <input type="text" id="invoiceNo" name="invoiceNo">
+          </div>
+          <div class="form-group">
+            <label for="distName">Dist. Name/Code</label>
+            <input type="text" id="distName" name="distName">
+          </div>
+          <div class="form-group">
+            <label for="invoiceDate">Invoice Date</label>
+            <input type="date" id="invoiceDate" name="invoiceDate">
+          </div>
+        </div>
+
+        <!-- Third Long Row -->
+        <div class="row">
+          <div class="form-group"><label>No</label><input type="text"></div>
+          <div class="form-group"><label>Sales No.</label><input type="text"></div>
+          <div class="form-group"><label>Case No.</label><input type="text"></div>
+          <div class="form-group"><label>Carton No.</label><input type="text"></div>
+          <div class="form-group"><label>Part No. on Invoice</label><input type="text"></div>
+          <div class="form-group"><label>Part Name</label><input type="text"></div>
+          <div class="form-group"><label>Inv. Qty.</label><input type="text"></div>
+          <div class="form-group"><label>Part No. Received</label><input type="text"></div>
+          <div class="form-group"><label>Recd. Qty.</label><input type="text"></div>
+          <div class="form-group"><label>Claim Qty.</label><input type="text"></div>
+          <div class="form-group"><label>Unit FOB</label><input type="text"></div>
+          <div class="form-group">
+            <label>Reason</label>
+            <select>
+              <option value="">Select</option>
+              <option value="missing">Missing</option>
+              <option value="damaged">Damaged</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Photo Upload Section -->
+        <div class="photo-section">
+          <label>Photo(s)</label>
+          <input type="file" multiple>
+        </div>
+
+        <div class="add-row">
+          <a href="#">➕ Add New Row</a>
+        </div>
+
+        <!-- Comments Row -->
+        <div class="row">
+          <div class="form-group" style="flex: 1;">
+            <label>Distributor’s Comments</label>
+            <textarea rows="3"></textarea>
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label>Remarks</label>
+            <textarea rows="3"></textarea>
+          </div>
+        </div>
+
+        <!-- Notes Section -->
+        <ul class="notes">
+          <li>Claims will be accepted by MSIL within 6 months from the date of invoice</li>
+          <li>No claimed part value should be lodged with MSIL with a total FOB value of less than USD 10, EUR 10, INR 800, JPY 1500</li>
+          <li>In case of damages/mis-shipment/wrong part, claim should be sent along with clear photographs</li>
+          <li>In case a carton is missing/carton contains short quantity. Write the missing carton no.</li>
+        </ul>
+
+        <!-- Buttons -->
+        <div class="form-buttons">
+          <button type="button" class="back-btn">←</button>
+          <button type="button" class="submit-btn" onclick="goToPopup()">SUBMIT</button>
+        </div>
+      </form>
+    </main>
+    </div>
+  </div>
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">✖</span>
+      <p>Claim Submitted Successfully!</p>
+      <button class="ok-btn" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+  <button class="back-button" onclick="goBack()">
+    &#8592;
+  </button>
+  <script>
+    function showModal() {
+      document.getElementById('successModal').style.display = 'flex';
+      document.querySelector('.submit-btn').disabled = true;
+    }
+
+    function closeModal() {
+      document.getElementById('successModal').style.display = 'none';
+      window.location.href = 'dashboard.html'; // Redirect to dashboard after OK
+    }
+
+    // Attach to submit button
+    document.querySelector('.submit-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      showModal();
+    });
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

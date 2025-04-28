@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;  
+  overflow: hidden;
+}
+
+.page-border {
+  margin: 10px;
+  border: 8px solid white;
+  border-radius: 16px;
+  box-sizing: border-box;
+  height: calc(100vh - 20px);
+  overflow: hidden;
+  background: white; /* Makes the box white */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* FIXED: Make header pure white */
+  padding: 8px 30px;
+  height: 60px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.left, .right, .user-profile, .powered {
+  display: flex;
+  align-items: center;
+}
+
+.msil-logo {
+  height: 26px;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 20px;
+  color: #1a237e;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.divider {
+  height: 25px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 15px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  /* border: 1px solid #aaa;
+  border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.user-details{
+  padding-right: 20px;
+}
+
+.inner-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4a148c;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #212694;
+  font-weight: 700;
+}
+
+.dropdown {
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 40px 20px;  /* ← Padding: top, right, bottom, left */
+  background: linear-gradient(to right, #cce0f9, #e4f0ff); /* Gradient inside box */
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.illustration img {
+  max-height: 70vh;
+  width: auto;
+}
+
+.login-box {
+  width: 400px;
+  margin: 80px;
+}
+
+.login-box h1 {
+  font-size: 28px;
+}
+
+.login-box h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+form input:focus {
+  outline: none;
+  border-color: #3399ff;
+}
+
+.password-field::placeholder {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #b0b0b0;
+}
+
+.btn-login, .btn-maruti {
+  padding: 12px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #0072f4;
+  margin-bottom: 10px;
+}
+
+.btn-maruti {
+  background-color: #2b2bff;
+}
+
+.btn-login:hover {
+  background-color: #005ace;
+}
+
+.btn-maruti:hover {
+  background-color: #0000c5;
+}
+
+.divider-text {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+

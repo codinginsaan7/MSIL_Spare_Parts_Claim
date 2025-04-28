@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    overflow:hidden;
+  }
+  
+  .page-border {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 20px); /* Full screen height */
+    overflow: hidden; /* Hide scrollbar */
+    border: 8px solid white;
+    border-radius: 16px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: white;
+  }
+  
+  
+  /* Header */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 8px 30px;
+    height: 60px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .left, .right, .user-profile, .powered {
+    display: flex;
+    align-items: center;
+  }
+  
+  .msil-logo {
+    height: 26px;
+  }
+  
+  .brand-name {
+    font-weight: 800;
+    font-size: 20px;
+    color: #1a237e;
+    margin-left: 10px;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .divider {
+    height: 25px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 15px;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    /* border: 1px solid #aaa;
+    border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+  }
+  
+  .user-details{
+    padding-right: 20px;
+  }
+
+  .inner-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4a148c;
+    border-radius: 50%;
+  }
+  
+  .user-name {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .user-id {
+    font-size: 14px;
+    color: #212694;
+    font-weight: 700;
+  }
+  
+  .dropdown {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #cce0f9, #e4f0ff);
+    padding: 20px 40px 40px 20px; /* ✅ this ensures visible bottom space */
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+    
+  .page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .options-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch; /* This makes all cards equal height */
+  }
+  
+  .option-card {
+    background: linear-gradient(to bottom right, #ffffff, #f7f7f7);
+    padding: 30px 30px 20px;
+    width: 220px;
+    min-height: 200px; /* Ensures same minimum height */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: transform 0.2s;
+  }
+  
+  
+  .option-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .option-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+  }
+  
+  .option-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.3;
+  }
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #002b5c; /* dark blue */
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+  }

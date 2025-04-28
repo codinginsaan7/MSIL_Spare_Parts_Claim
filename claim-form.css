@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+  overflow: hidden;
+}
+
+.page-border {
+  margin: 10px;
+  border: 8px solid white;
+  border-radius: 16px;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #cce0f9, #e4f0ff);
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 8px 30px;
+  height: 60px;
+}
+
+.left, .right, .user-profile, .powered {
+  display: flex;
+  align-items: center;
+}
+
+.msil-logo {
+  height: 26px;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 20px;
+  color: #1a237e;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.divider {
+  height: 25px;
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 15px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  /* border: 1px solid #aaa;
+  border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.user-details{
+  padding-right: 20px;
+}
+
+.inner-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4a148c;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-id {
+  font-size: 14px;
+  color: #212694;
+  font-weight: 700;
+}
+
+.dropdown {
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.inner-container {
+  background-color: #8cb9e9; /* Your custom color */
+  padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 16px 16px 16px 16px;
+}
+
+/* Main Form */
+.claim-form-container {
+  flex: 1;
+  overflow-y: auto;
+  background: linear-gradient(to right, #cce0f9, #e4f0ff);;
+  padding: 30px 40px 40px;
+  border-radius: 16px 16px 16px 16px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.claim-form-container h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.claim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Rows */
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Photo Upload */
+.photo-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.photo-section label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="file"] {
+  border: 1px dashed #007bff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Add Row Button */
+.add-row {
+  color: #007bff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Notes Section */
+.notes {
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.notes li {
+  margin-bottom: 5px;
+}
+
+/* Submit and Back Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-btn {
+  padding: 10px 30px;
+  background: #007bff;
+  margin: 20px auto 0 auto; /* Top Margin 20px, Center Horizontally */
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #005ace;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: linear-gradient(to right, #cce0f9, #b3d4fc);
+  border-radius: 12px;
+  padding: 40px 20px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.ok-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ok-btn:hover {
+  background-color: #0056c7;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: red;
+  cursor: pointer;
+}
+
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #002b5c; /* dark blue */
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
