@@ -49,8 +49,7 @@ The website replicates the claim management flow, allowing users to:
 
 ## 🌐 Hosting
 
-The project can be hosted easily using **GitHub Pages**.
-After uploading, enable GitHub Pages under repository settings to access a live URL like:
+site can be accessed at:
 https://codinginsaan7.github.io/MSIL_Spare_Parts_Claim/
 
 ---
