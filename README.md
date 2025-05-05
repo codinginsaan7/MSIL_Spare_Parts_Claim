@@ -53,6 +53,14 @@ site can be accessed at:
 
 https://codinginsaan7.github.io/MSIL_Spare_Parts_Claim/
 
+---
 
+## 📜 License
+
+This project was developed officially for **Maruti Suzuki India Limited (MSIL)**.
+
+It is displayed publicly **only for showcasing development skills**.  
+Commercial use, modification, or redistribution is **strictly prohibited**.  
+See the [LICENSE] file for full terms.
 
 
