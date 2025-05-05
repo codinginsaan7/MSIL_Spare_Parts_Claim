@@ -2,7 +2,7 @@
 
 This project is a **fully responsive web portal** interface for **Maruti Suzuki India Limited (MSIL) Spare Parts Claim** system, built using HTML, CSS, and JavaScript.
 
-The website replicates the claim management flow, allowing users to:
+The website allows users to:
 - Login
 - Submit OTP
 - Navigate to Dashboard
@@ -53,18 +53,6 @@ site can be accessed at:
 
 https://codinginsaan7.github.io/MSIL_Spare_Parts_Claim/
 
----
 
-## 📢 Important Notes
 
-- This project is purely for **learning** and **educational purposes**.
-- It is a **frontend simulation** only. No backend/database is connected.
-- Design inspired by the internal MSIL Spare Parts Claim portal workflow.
-- All logos and names used are for educational demonstration.
-
----
-
-⭐ Feel free to Fork, Clone, and Improve this project!
-
----
 
